@@ -1,0 +1,5 @@
+clear
+db.movies.find()
+db.products.find()
+use("sample_mflix")
+show dbs
