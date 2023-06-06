@@ -1,0 +1,10 @@
+use("TestDB")
+
+db.products.updateOne(
+    //query
+    {_id: 2},
+    //change => operators
+    {$inc: { 
+        price: 100,
+       }   }
+)

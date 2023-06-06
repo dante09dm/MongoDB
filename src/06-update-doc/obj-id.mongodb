@@ -1,0 +1,14 @@
+use("TestDB")
+
+db.products.updateOne(
+    //query
+    {_id: ObjectId("647e40ad03626c3a354d59e2")},
+    //change => operators
+    {$set: { 
+        name: 'Change name',
+        price: 3000,
+        tags: ['A', 'B','C']
+       }   }
+)
+
+
