@@ -1,0 +1,18 @@
+use("TestDB")
+
+
+//GLOBAL 
+//1 elemento
+//db.inventory.updateMany({}, {
+    //$pull: {
+       // tags: "book"
+    //}
+//})
+
+db.inventory.updateMany({}, {
+    $pull: {
+        tags: {
+            $in: ["appliance", "school"]
+        }
+    }
+})

@@ -1,0 +1,25 @@
+gguse("TestDB")
+
+
+//db.iot.insertOne(
+  //{  sensor: "A001", date: "2022-01-03", readings: [1224] })
+
+
+
+  db.iot.updateOne({
+    sensor: "A001",
+    date: "2022-01-03",
+  }, {
+    $push: {
+      readings: [2323]
+    }
+  })
+
+//db.iot.insertOne(
+    //{ sensor: "A001", date: "2022-01-01", readings: [1224] },
+    //{ $pop:{
+           // readings: 1}
+        //})    
+
+
+db.iot.find()

@@ -1,0 +1,7 @@
+use("TestDB")
+
+db.inventory.updateOne({_id: 4}, {
+    $pull: {
+        tags: "headphones"
+    }
+})
