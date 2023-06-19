@@ -1,0 +1,17 @@
+use("TestDB")
+
+
+//db.products.deleteOne( {"_id": ObjectId("64838a90a6ecae5f9a12d374")});
+//db.products.deleteOne({_id: 1})
+
+//db.products.deleteMany({price:100})
+
+db.products.remove({
+    "_id": {
+        $in: [
+            ObjectId("64838a90a6ecae5f9a12d374"),
+            ObjectId("64838a97d4f08d5b0aa5052e")
+        ]
+     }
+}) 
+

@@ -1,0 +1,32 @@
+use("TestDB")
+
+
+//$in , values & arrays  
+//db.inventory.find({ qty: { $in: [20,25]}})
+//db.inventory.find({ tags: { $in: ["book","electronics"]}}) //que exista en la sección tags uno u otro elemento
+
+
+//$nin , values & arrays  
+//db.inventory.find({ tags: { $nin: ["book","electronics"]}})
+//db.inventory.find({ tags: { $nin: ["book","electronics"]}})
+
+// arrays
+
+
+//db.inventory.find({ tags: "book"})
+//db.inventory.find({ tags: ["school", "book" ]})
+//db.inventory.find({ tags: ["book", "school" ]}) //no funciona xq está mal el orden
+
+
+
+// arrays $all  (QUE TENGA AMBOS ELEMENTOS DE LA BÚSQUEDA)
+
+//db.inventory.find({ tags: { $all: ["book", "school" ]}})
+
+
+// arrays $size (CANTIDAD DE ELEMENTOS QUE TIENE EL ARRAY)
+
+//db.inventory.find({ tags: {$size: 2}})
+
+// $elemMatch
+db.survey.find({results: { $elemMatch: {product: "xyz", score: {$gte: 7}}}})

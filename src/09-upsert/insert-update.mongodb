@@ -1,4 +1,4 @@
-gguse("TestDB")
+use("TestDB")
 
 
 //db.iot.insertOne(
@@ -11,14 +11,16 @@ gguse("TestDB")
     date: "2022-01-03",
   }, {
     $push: {
-      readings: [2323]
+      readings: 1223
+        
+      
     }
   })
 
 //db.iot.insertOne(
     //{ sensor: "A001", date: "2022-01-01", readings: [1224] },
     //{ $pop:{
-           // readings: 1}
+           // readings: 2323}
         //})    
 
 

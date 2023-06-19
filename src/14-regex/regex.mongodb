@@ -1,0 +1,8 @@
+use("TestDB")
+
+//db.inventory.find({ "item.description": "Single line description."})
+//db.inventory.find({ "item.description": { $regex: /line/}})
+//db.inventory.find({ "item.description": { $regex: /LINE/i }  }) // (NO DISTINGUE MINUSCULA DE MAYUSCULA)
+//db.inventory.find({ "item.description": { $regex: /line$/i }  }) //($ SIRVE PARA DECLARAR QUE LAS ORACIONES TERMINEN EN ESA PALABRA)
+//db.inventory.find({ "item.description": { $regex: /^single/i }  }) //QUE EMPIECE CON:
+db.inventory.find({ "item.description": { $regex: /^s/im }  }) //m MULTILINE 

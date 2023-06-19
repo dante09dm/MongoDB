@@ -1,0 +1,4 @@
+use("TestDB")
+
+db.inventory.updateMany({qty: {$ne: 20}},
+    {$inc: {qty:10 }})

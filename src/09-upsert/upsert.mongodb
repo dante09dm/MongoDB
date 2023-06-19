@@ -1,0 +1,13 @@
+use("TestDB")
+
+db.iot.updateOne({
+    sensor: "A001",
+    date: "2022-01-04",
+  }, {
+    $push: {
+      readings: 12312
+        
+    }
+    }, { 
+        upsert: true
+  })

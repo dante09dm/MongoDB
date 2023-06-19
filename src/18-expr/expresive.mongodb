@@ -1,0 +1,7 @@
+use("TestDB")
+
+//db.monthlyBudget.find({spent: {$gte: 100}})
+
+// para comparar uno valor con otro sin determinar un número se usa la siguiente expresión
+
+db.monthlyBudget.find({$expr: {$gte: ["$spent", "$budget"]}})

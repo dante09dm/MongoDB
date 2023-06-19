@@ -1,0 +1,26 @@
+use("sample_training")
+
+
+//db.companies.find()
+// db.trips.find({"start station location.type" : "Point"}) QUE EL CAMPO SEA IGUAL A LA SIGUIENTE PALABRA
+
+// db.companies.find(
+//     {"relationships.0.person.last_name": "Zuckerberg"}, //la posicion 0 represent el lugar del CEO 
+//     {
+//         name: 1,
+//         relationships: 1
+//     }
+// ).count()  //108 CEOS llamados Mark
+ 
+db.companies.find({
+    relationships:{
+        $elemMatch:{
+            "person.first_name": "Mark"
+        }
+        }
+    },
+    {
+        name: 1,
+        relationships: 1
+    }
+).count()
